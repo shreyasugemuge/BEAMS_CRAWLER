@@ -1,3 +1,6 @@
+from bokeh.plotting import show
+
+from util import bargraph as bar
 from util import parse as parser
 from util import request as req
 
@@ -10,3 +13,6 @@ def get_data(ddo):
     df = parser.process_dataframe(raw_df)
     return df
 
+df = get_data(str(2201000450))
+plot = bar.gen_graph(df)
+show(plot)

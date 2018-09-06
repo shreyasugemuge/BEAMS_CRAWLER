@@ -1,0 +1,83 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>line plot example</title>
+      
+      
+        
+          
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css" type="text/css" />
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            <div class="bk-root" id="3609a767-b599-455b-ba66-fe2a95a657b6"></div>
+          
+        
+      
+      
+        <script type="application/json" id="8f3e4477-10d4-4a56-8d9d-ac0f8e9fd4be">
+          {"4dcf5e9b-c565-49fe-ba80-32fee14502f5":{"roots":{"references":[{"attributes":{},"id":"2bd32301-58c9-49db-a33f-2797662905c6","type":"Selection"},{"attributes":{"callback":null,"data":{"Actual Exp":{"__ndarray__":"AAAAAAAAAAAAAAAAAAAAALKd76fGyzFATmIQWDmEiEA2XrpJDLJXQCuHFtnOx2NAeekmMUhfoUBmZmZm5mCQQLtJDAIr6YVApHA9CtejpECNl24SQ46rQPP91HiJrNVA","dtype":"float64","shape":[12]},"Grant Received":{"__ndarray__":"AAAAAAAgcUBqvHSTGMyLQAAAAAAAOI1AAAAAAACAjkAAAAAAACCfQAAAAAAAwKJAAAAAAAAgo0AAAAAAALSkQAAAAAAAUK9AAAAAAABptEAAAAAAALHKQDZeukmcvupA","dtype":"float64","shape":[12]},"SDH":["Computer Expenses","Minor Works","Advertising and Public Relation","Wages","Motor Vehicles","Off. Day Compensation","Professional Services","Rewards","Domestic Travel Expenses","Investigation Fund","Office Expenses","Petrol, Oil and Lubricants"]},"selected":{"id":"2bd32301-58c9-49db-a33f-2797662905c6","type":"Selection"},"selection_policy":{"id":"d11f9e42-d29b-47f9-b59b-f4dbfaba3e73","type":"UnionRenderers"}},"id":"95d2d472-f400-4975-b3ed-f644eb447180","type":"ColumnDataSource"},{"attributes":{"bottom":{"expr":{"id":"94e1ec02-100b-46b5-86fb-51c6f35eb3ca","type":"Stack"}},"fill_color":{"value":"#85bb65"},"line_color":{"value":"#85bb65"},"top":{"expr":{"id":"a0f78640-f956-4713-ad63-16ff28dac044","type":"Stack"}},"width":{"value":0.3},"x":{"field":"SDH"}},"id":"05af291d-d159-4644-9ce5-05295dadcb76","type":"VBar"},{"attributes":{"bottom":{"expr":{"id":"94e1ec02-100b-46b5-86fb-51c6f35eb3ca","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"a0f78640-f956-4713-ad63-16ff28dac044","type":"Stack"}},"width":{"value":0.3},"x":{"field":"SDH"}},"id":"9934a0aa-3676-47a9-929f-9bc8a04e1933","type":"VBar"},{"attributes":{"data_source":{"id":"95d2d472-f400-4975-b3ed-f644eb447180","type":"ColumnDataSource"},"glyph":{"id":"05af291d-d159-4644-9ce5-05295dadcb76","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"Actual Exp","nonselection_glyph":{"id":"9934a0aa-3676-47a9-929f-9bc8a04e1933","type":"VBar"},"selection_glyph":null,"view":{"id":"a407b6ae-dc20-4954-a2d2-787d9065fe1d","type":"CDSView"}},"id":"8bc0bc89-d70c-4de6-a806-30bfef684612","type":"GlyphRenderer"},{"attributes":{"source":{"id":"95d2d472-f400-4975-b3ed-f644eb447180","type":"ColumnDataSource"}},"id":"a407b6ae-dc20-4954-a2d2-787d9065fe1d","type":"CDSView"},{"attributes":{},"id":"8d2abdb7-765e-4f18-8218-a02e1d2febf4","type":"CategoricalTickFormatter"},{"attributes":{"source":{"id":"bfd57b20-e961-4d6b-8130-b33e205bdc6d","type":"ColumnDataSource"}},"id":"aa90961f-85c8-48d4-b978-5e4c1174b99a","type":"CDSView"},{"attributes":{"callback":null,"data":{"Actual Exp":{"__ndarray__":"AAAAAAAAAAAAAAAAAAAAALKd76fGyzFATmIQWDmEiEA2XrpJDLJXQCuHFtnOx2NAeekmMUhfoUBmZmZm5mCQQLtJDAIr6YVApHA9CtejpECNl24SQ46rQPP91HiJrNVA","dtype":"float64","shape":[12]},"Grant Received":{"__ndarray__":"AAAAAAAgcUBqvHSTGMyLQAAAAAAAOI1AAAAAAACAjkAAAAAAACCfQAAAAAAAwKJAAAAAAAAgo0AAAAAAALSkQAAAAAAAUK9AAAAAAABptEAAAAAAALHKQDZeukmcvupA","dtype":"float64","shape":[12]},"SDH":["Computer Expenses","Minor Works","Advertising and Public Relation","Wages","Motor Vehicles","Off. Day Compensation","Professional Services","Rewards","Domestic Travel Expenses","Investigation Fund","Office Expenses","Petrol, Oil and Lubricants"]},"selected":{"id":"5c212abf-3ea1-41a9-9ca1-19293beb65d5","type":"Selection"},"selection_policy":{"id":"b927df55-7a81-4924-beb3-c9d1e01d68aa","type":"UnionRenderers"}},"id":"bfd57b20-e961-4d6b-8130-b33e205bdc6d","type":"ColumnDataSource"},{"attributes":{},"id":"f2183701-7359-4cbe-a262-88032475cdb7","type":"HelpTool"},{"attributes":{},"id":"e307ca86-b675-4684-91a3-cb7bd9b8fd3a","type":"ResetTool"},{"attributes":{},"id":"5eaa53a3-109a-4b32-a58e-c24ee2632390","type":"SaveTool"},{"attributes":{"overlay":{"id":"3253e49d-f9c1-40f6-962b-2cc9d38cfb3a","type":"BoxAnnotation"}},"id":"628ab04d-a794-4971-9efa-d0f65b3d8ddd","type":"BoxZoomTool"},{"attributes":{},"id":"2d086e50-bc8b-4ad5-bd0e-0a6de751bf70","type":"WheelZoomTool"},{"attributes":{"fields":["Grant Received","Actual Exp"]},"id":"a0f78640-f956-4713-ad63-16ff28dac044","type":"Stack"},{"attributes":{},"id":"05302174-cb8d-47fd-9003-cb38bfdb052a","type":"PanTool"},{"attributes":{"fields":[]},"id":"b94234d8-30c7-4276-baf2-7d7a0482f37e","type":"Stack"},{"attributes":{"callback":null,"factors":["Computer Expenses","Minor Works","Advertising and Public Relation","Wages","Motor Vehicles","Off. Day Compensation","Professional Services","Rewards","Domestic Travel Expenses","Investigation Fund","Office Expenses","Petrol, Oil and Lubricants"]},"id":"56923388-9736-4b1c-9413-148c098448f5","type":"FactorRange"},{"attributes":{"fields":["Grant Received"]},"id":"94e1ec02-100b-46b5-86fb-51c6f35eb3ca","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"b94234d8-30c7-4276-baf2-7d7a0482f37e","type":"Stack"}},"fill_color":{"value":"#c9d9d3"},"line_color":{"value":"#c9d9d3"},"top":{"expr":{"id":"7879fdc7-0963-4610-95f1-dad9e9af3a08","type":"Stack"}},"width":{"value":0.3},"x":{"field":"SDH"}},"id":"b2a8956e-79b6-4884-95ae-b5d3588a0fdd","type":"VBar"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"3253e49d-f9c1-40f6-962b-2cc9d38cfb3a","type":"BoxAnnotation"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"05302174-cb8d-47fd-9003-cb38bfdb052a","type":"PanTool"},{"id":"2d086e50-bc8b-4ad5-bd0e-0a6de751bf70","type":"WheelZoomTool"},{"id":"628ab04d-a794-4971-9efa-d0f65b3d8ddd","type":"BoxZoomTool"},{"id":"5eaa53a3-109a-4b32-a58e-c24ee2632390","type":"SaveTool"},{"id":"e307ca86-b675-4684-91a3-cb7bd9b8fd3a","type":"ResetTool"},{"id":"f2183701-7359-4cbe-a262-88032475cdb7","type":"HelpTool"}]},"id":"dd4c4709-3d41-4855-8938-5806eefae2cc","type":"Toolbar"},{"attributes":{"data_source":{"id":"bfd57b20-e961-4d6b-8130-b33e205bdc6d","type":"ColumnDataSource"},"glyph":{"id":"b2a8956e-79b6-4884-95ae-b5d3588a0fdd","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"Grant Received","nonselection_glyph":{"id":"35a621c7-03d1-436c-8cc2-3759aa9268e5","type":"VBar"},"selection_glyph":null,"view":{"id":"aa90961f-85c8-48d4-b978-5e4c1174b99a","type":"CDSView"}},"id":"b6c2f7ef-f739-45f0-bf27-041b90337f99","type":"GlyphRenderer"},{"attributes":{"fields":["Grant Received"]},"id":"7879fdc7-0963-4610-95f1-dad9e9af3a08","type":"Stack"},{"attributes":{"formatter":{"id":"3271ab83-630e-457a-851c-874f5e867837","type":"BasicTickFormatter"},"plot":{"id":"4fc5119f-1679-48b2-a416-d2ad6dac426c","subtype":"Figure","type":"Plot"},"ticker":{"id":"570e2056-da83-4759-b301-7bf57dd6e3eb","type":"BasicTicker"}},"id":"4e6c46be-3424-4f55-8b44-de14af9c6124","type":"LinearAxis"},{"attributes":{"bottom":{"expr":{"id":"b94234d8-30c7-4276-baf2-7d7a0482f37e","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"7879fdc7-0963-4610-95f1-dad9e9af3a08","type":"Stack"}},"width":{"value":0.3},"x":{"field":"SDH"}},"id":"35a621c7-03d1-436c-8cc2-3759aa9268e5","type":"VBar"},{"attributes":{},"id":"570e2056-da83-4759-b301-7bf57dd6e3eb","type":"BasicTicker"},{"attributes":{"dimension":1,"plot":{"id":"4fc5119f-1679-48b2-a416-d2ad6dac426c","subtype":"Figure","type":"Plot"},"ticker":{"id":"570e2056-da83-4759-b301-7bf57dd6e3eb","type":"BasicTicker"}},"id":"b11ce068-9d17-47b9-acd3-c1bcaa2a4006","type":"Grid"},{"attributes":{"plot":null,"text":""},"id":"42fa13b3-6738-4ef7-90c6-a8ce135d7124","type":"Title"},{"attributes":{"below":[{"id":"a1438905-7bd2-4d8a-aee6-54e9cf607dc8","type":"CategoricalAxis"}],"left":[{"id":"4e6c46be-3424-4f55-8b44-de14af9c6124","type":"LinearAxis"}],"plot_width":1200,"renderers":[{"id":"a1438905-7bd2-4d8a-aee6-54e9cf607dc8","type":"CategoricalAxis"},{"id":"25bb3db8-d65c-4bd9-b7b7-e880ef951acc","type":"Grid"},{"id":"4e6c46be-3424-4f55-8b44-de14af9c6124","type":"LinearAxis"},{"id":"b11ce068-9d17-47b9-acd3-c1bcaa2a4006","type":"Grid"},{"id":"3253e49d-f9c1-40f6-962b-2cc9d38cfb3a","type":"BoxAnnotation"},{"id":"b6c2f7ef-f739-45f0-bf27-041b90337f99","type":"GlyphRenderer"},{"id":"8bc0bc89-d70c-4de6-a806-30bfef684612","type":"GlyphRenderer"}],"title":{"id":"42fa13b3-6738-4ef7-90c6-a8ce135d7124","type":"Title"},"toolbar":{"id":"dd4c4709-3d41-4855-8938-5806eefae2cc","type":"Toolbar"},"x_range":{"id":"56923388-9736-4b1c-9413-148c098448f5","type":"FactorRange"},"x_scale":{"id":"a9955366-92fb-4152-b8c4-2f17a95b55eb","type":"CategoricalScale"},"y_range":{"id":"b27bb43c-bb97-49f6-8629-460927be5779","type":"DataRange1d"},"y_scale":{"id":"79e7fd06-47ad-49b8-b47c-7d0421daed44","type":"LinearScale"}},"id":"4fc5119f-1679-48b2-a416-d2ad6dac426c","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"a9955366-92fb-4152-b8c4-2f17a95b55eb","type":"CategoricalScale"},{"attributes":{"callback":null},"id":"b27bb43c-bb97-49f6-8629-460927be5779","type":"DataRange1d"},{"attributes":{},"id":"3271ab83-630e-457a-851c-874f5e867837","type":"BasicTickFormatter"},{"attributes":{},"id":"b927df55-7a81-4924-beb3-c9d1e01d68aa","type":"UnionRenderers"},{"attributes":{"plot":{"id":"4fc5119f-1679-48b2-a416-d2ad6dac426c","subtype":"Figure","type":"Plot"},"ticker":{"id":"ae2ba306-29da-423a-a14a-02507ae56801","type":"CategoricalTicker"}},"id":"25bb3db8-d65c-4bd9-b7b7-e880ef951acc","type":"Grid"},{"attributes":{},"id":"79e7fd06-47ad-49b8-b47c-7d0421daed44","type":"LinearScale"},{"attributes":{},"id":"5c212abf-3ea1-41a9-9ca1-19293beb65d5","type":"Selection"},{"attributes":{},"id":"ae2ba306-29da-423a-a14a-02507ae56801","type":"CategoricalTicker"},{"attributes":{"formatter":{"id":"8d2abdb7-765e-4f18-8218-a02e1d2febf4","type":"CategoricalTickFormatter"},"major_label_orientation":0.7853981633974483,"plot":{"id":"4fc5119f-1679-48b2-a416-d2ad6dac426c","subtype":"Figure","type":"Plot"},"ticker":{"id":"ae2ba306-29da-423a-a14a-02507ae56801","type":"CategoricalTicker"}},"id":"a1438905-7bd2-4d8a-aee6-54e9cf607dc8","type":"CategoricalAxis"},{"attributes":{},"id":"d11f9e42-d29b-47f9-b59b-f4dbfaba3e73","type":"UnionRenderers"}],"root_ids":["4fc5119f-1679-48b2-a416-d2ad6dac426c"]},"title":"Bokeh Application","version":"0.13.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('8f3e4477-10d4-4a56-8d9d-ac0f8e9fd4be').textContent;
+                  var render_items = [{"docid":"4dcf5e9b-c565-49fe-ba80-32fee14502f5","roots":{"4fc5119f-1679-48b2-a416-d2ad6dac426c":"3609a767-b599-455b-ba66-fe2a95a657b6"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
