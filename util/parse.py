@@ -20,6 +20,7 @@ def view_df(df):
 
 def process_dataframe(raw_df):
     dict = db.get_scheme_dict()
+
     # map last two characters with particular heads
     raw_df['Scheme & Detail Head'] = raw_df['Scheme & Detail Head'].map(lambda x: str(x)[-2:]).map(dict)
 
