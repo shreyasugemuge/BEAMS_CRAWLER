@@ -2,35 +2,37 @@
 import math
 
 from bokeh.io import export_png
-from bokeh.models import ColumnDataSource
-from bokeh.plotting import figure, output_file
-from bokeh.core.properties import value
-from bokeh.models import LabelSet
+from bokeh.models import ColumnDataSource, FactorRange
+from bokeh.plotting import figure
+from bokeh.transform import factor_cmap
 
 def gen_graph(df,ddo):
-    df.sort_values('Grant Received', inplace=True)
-    x = df['Scheme & Detail Head']
-    y1 = df['Grant Received']
-    y2 = df['Actual Exp']
+    xs = df['Scheme & Detail Head'].tolist()
+    ys = ['Grant Received', 'Actual Exp']
 
-    source = ColumnDataSource(dict(x=x, y=y1))
-    data = {
-        'SDH': x,
-        'Grant Received': y1,
-        'Actual Exp': y2
-    }
+    data = {'xs': xs,
+            'Grant Received': df['Grant Received'].tolist(),
+            'Actual Exp': df['Actual Exp'].tolist()}
 
-    output_file("lines.html", title="line plot example")
-
-    plot = figure(plot_width=1200, plot_height=600,
-                  x_minor_ticks=2, tools="",
-                  x_range=x, title='Scheme Wise Expenditure for ddo: {0}'.format(ddo))
-
-    plot.vbar_stack(['Grant Received', 'Actual Exp'],legend=[value(x) for x in ['Actual Expense', 'Grant Received']], source=data, x='SDH', width=0.3, color=["#c9d9d3", "#85bb65"])
+    palette = ["#c9d9d3", "#718dbf"]
 
 
-    plot.xaxis.major_label_orientation = math.pi / 4
-    export_png(plot, 'plot.png')
+    x = [(fr, yr) for fr in xs for yr in ys]
+    counts = sum(zip(data['Grant Received'], data['Actual Exp']), ())  # like an hstack
 
+    source = ColumnDataSource(data=dict(x=x, counts=counts))
 
-    return plot
+    p = figure(x_range=FactorRange(*x), plot_height=350, title="ddo: " + str(ddo),
+               toolbar_location=None, tools="")
+
+    p.vbar(x='x', top='counts', width=0.9, source=source, line_color="white",
+           fill_color=factor_cmap('x', palette=palette, factors=ys, start=1, end=2))
+
+    p.y_range.start = 0
+    p.x_range.range_padding = 0.1
+    p.xaxis.major_label_orientation = "vertical"
+    p.xaxis.group_text_font_size = '5pt'
+    p.xaxis.group_text_align = 'right'
+    p.xgrid.grid_line_color = None
+    export_png(p, 'plot.png')
+    return p

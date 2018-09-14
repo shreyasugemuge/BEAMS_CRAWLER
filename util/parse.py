@@ -21,8 +21,13 @@ def view_df(df):
 def process_dataframe(raw_df):
     dict = db.get_scheme_dict()
 
-    # map last two characters with particular heads
     raw_df['Scheme & Detail Head'] = raw_df['Scheme & Detail Head'].map(lambda x: str(x)[-2:]).map(dict)
 
-    # remove heads that are not needed and return
-    return raw_df[raw_df['Scheme & Detail Head'].notnull()].groupby('Scheme & Detail Head', as_index=False).sum()
+    raw_df['Spending'] = round(100*(raw_df['Actual Exp'] / raw_df['Grant Received']),2)
+    df = raw_df[raw_df['Scheme & Detail Head'].notnull()]
+    df = df[df['Spending'] < 40]
+
+    return df.groupby('Scheme & Detail Head', as_index=False).sum()
+
+# def to_inr(amount):
+#     amount.astype(str)
