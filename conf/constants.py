@@ -1,1 +1,0 @@
-FUND_REPORT_BASE_URL = 'https://beams.mahakosh.gov.in/Beams5/BudgetMVC/MISRPT/DDO_FundReport.jsp?year=2018-2019&dist=0&type=All'

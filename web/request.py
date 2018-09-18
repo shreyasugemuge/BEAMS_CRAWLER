@@ -1,7 +1,7 @@
 import ssl
 from urllib.request import urlopen
 
-from conf import constants as const
+from conf import Config as const
 
 
 def get_fund_url(ddo):
