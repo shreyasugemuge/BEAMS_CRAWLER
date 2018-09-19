@@ -1,12 +1,10 @@
-
-import math
-
 from bokeh.io import export_png
 from bokeh.models import ColumnDataSource, FactorRange
 from bokeh.plotting import figure
 from bokeh.transform import factor_cmap
 
-def gen_graph(df,ddo):
+
+def gen_graph(df, ddo):
     xs = df['Scheme & Detail Head'].tolist()
     ys = ['Grant Received', 'Actual Exp']
 
@@ -15,7 +13,6 @@ def gen_graph(df,ddo):
             'Actual Exp': df['Actual Exp'].tolist()}
 
     palette = ["#c9d9d3", "#718dbf"]
-
 
     x = [(fr, yr) for fr in xs for yr in ys]
     counts = sum(zip(data['Grant Received'], data['Actual Exp']), ())  # like an hstack
@@ -36,3 +33,11 @@ def gen_graph(df,ddo):
     p.xgrid.grid_line_color = None
     export_png(p, 'plot.png')
     return p
+
+
+def prettify(df):
+    df.sort_values('Spending', inplace=True, ascending=True)
+    df['Grant Received'] = 'Rs.' + round((df['Grant Received'] * 1000), 2).astype(str)
+    df['Actual Exp'] = 'Rs.' + round((df['Actual Exp'] * 1000), 2).astype(str)
+    df['Spending'] = df['Spending'].astype(str) + ' %'
+    return df
