@@ -24,8 +24,9 @@ def compose_and_send(fromaddr, frompass, toaddr, data, ddo):
 
 def send(msg, fromaddr, frompass, toaddr):
     text = msg.as_string()
+    print("getting Gmail SMTP Connection")
     s = mail.SMTP('smtp.gmail.com', 587)
-    print("Making TLS Connection")
+    print("Configuring TLS Protocol")
     s.starttls()
     print("Authenticating SMTP client")
     s.login(fromaddr, frompass)
@@ -35,7 +36,7 @@ def send(msg, fromaddr, frompass, toaddr):
 
 
 def gen_section(thres, df):
-    print("Generating Section {f}".format(f=str(thres-1)))
+    print("Generating Section {f}".format(f=str(thres+1)))
     if (df.shape[0] == 0):
         return ""
     final = C.SECTION_HEADER.format(color=C.COLOR[thres], thres=C.THRES[thres])
